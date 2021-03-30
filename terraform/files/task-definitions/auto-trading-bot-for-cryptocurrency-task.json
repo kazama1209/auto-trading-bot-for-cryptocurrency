@@ -1,0 +1,30 @@
+[
+  {
+    "name": "python3",
+    "image": "966489357781.dkr.ecr.ap-northeast-1.amazonaws.com/auto-trading-bot-for-cryptocurrency",
+    "cpu": 256,
+    "memory": 512,
+    "essential": true,
+    "workingDirectory": "/code/opt",
+    "environment": [
+      {
+        "name": "TZ",
+        "value": "Japan"
+      }
+    ],
+    "command": [
+      "bash",
+      "-c",
+      "python start.py"
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "secretOptions": null,
+      "options": {
+        "awslogs-group": "/ecs/auto-trading-bot-for-cryptocurrency",
+        "awslogs-region": "ap-northeast-1",
+        "awslogs-stream-prefix": "production"
+      }
+    }
+  }
+]

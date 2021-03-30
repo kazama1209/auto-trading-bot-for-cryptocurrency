@@ -1,0 +1,4 @@
+aws_access_key  = "AWSアクセスキー"
+aws_secret_key  = "AWSシークレットキー"
+key_name        = "キーペア名"
+public_key_path = "公開鍵へのパス"
